@@ -1,0 +1,30 @@
+# Proyecto de la startup: lanzamiento de una app (12 tareas)
+# Formato: tarea,duracion   y luego   predecesora->sucesora
+Requisitos,8
+Diseno,16
+BaseDatos,12
+Backend,24
+Frontend,20
+API,10
+Pruebas,14
+Documentacion,6
+Infraestructura,8
+Despliegue,4
+Capacitacion,6
+Lanzamiento,2
+
+Requisitos->Diseno
+Requisitos->BaseDatos
+Requisitos->Infraestructura
+Diseno->Frontend
+BaseDatos->Backend
+Backend->API
+API->Frontend
+Frontend->Pruebas
+Backend->Pruebas
+Backend->Documentacion
+Pruebas->Despliegue
+Infraestructura->Despliegue
+Documentacion->Capacitacion
+Despliegue->Lanzamiento
+Capacitacion->Lanzamiento

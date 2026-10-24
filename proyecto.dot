@@ -1,0 +1,31 @@
+digraph Proyecto {
+    rankdir=LR;
+    node [shape=box];
+    Requisitos [label="Requisitos\n8h", style=filled, fillcolor=lightcoral];
+    Diseno [label="Diseno\n16h"];
+    BaseDatos [label="BaseDatos\n12h", style=filled, fillcolor=lightcoral];
+    Backend [label="Backend\n24h", style=filled, fillcolor=lightcoral];
+    Frontend [label="Frontend\n20h", style=filled, fillcolor=lightcoral];
+    API [label="API\n10h", style=filled, fillcolor=lightcoral];
+    Pruebas [label="Pruebas\n14h", style=filled, fillcolor=lightcoral];
+    Documentacion [label="Documentacion\n6h"];
+    Infraestructura [label="Infraestructura\n8h"];
+    Despliegue [label="Despliegue\n4h", style=filled, fillcolor=lightcoral];
+    Capacitacion [label="Capacitacion\n6h"];
+    Lanzamiento [label="Lanzamiento\n2h", style=filled, fillcolor=lightcoral];
+    Requisitos -> Diseno;
+    Requisitos -> BaseDatos [color=red, penwidth=2];
+    Requisitos -> Infraestructura;
+    Diseno -> Frontend;
+    BaseDatos -> Backend [color=red, penwidth=2];
+    Backend -> API [color=red, penwidth=2];
+    Backend -> Pruebas;
+    Backend -> Documentacion;
+    Frontend -> Pruebas [color=red, penwidth=2];
+    API -> Frontend [color=red, penwidth=2];
+    Pruebas -> Despliegue [color=red, penwidth=2];
+    Documentacion -> Capacitacion;
+    Infraestructura -> Despliegue;
+    Despliegue -> Lanzamiento [color=red, penwidth=2];
+    Capacitacion -> Lanzamiento;
+}
